@@ -20,13 +20,14 @@
 #set par(justify: true)
 
 #v(1cm)
-#text(size: 11pt, weight: "bold")[#upper(nama).] #text(size: 11pt)["#rancanganTitle"]\ \
+#text(size: 11pt, weight: "bold")[#upper(nama).] #text(size: 11pt)["#rancanganTitle"]\
+#v(0.25cm)
 #context [
   #let total = counter(page).final().first()
   // TODO: update the roman numeral count ('v') manually when frontmatter pages change
-  #text(size: 11pt)[v + #total halaman.]\
+  #text(size: 11pt)[v + #total halaman.]
 ]
-
+#v(0.25cm)
 #h(1cm)Panduan ini disusun dengan memanfaatkan templat Laporan Hasil Aktualisasi berbasis Typst sebagai wahana penulisannya sekaligus sebagai contoh langsung (_working example_) dari setiap fitur yang dijelaskan. Materi disusun secara bertahap, dimulai dari pengenalan sintaks dasar Typst -- meliputi penulisan judul, penekanan teks, daftar, mode kode, serta aturan `set` dan `show` -- dilanjutkan dengan cara menyisipkan gambar, tabel, dan persamaan matematis sebagai objek bernomor yang dapat dirujuk silang.
 \
 #h(1cm)Selanjutnya, panduan ini menjelaskan mekanisme sitasi dan penyusunan daftar pustaka menggunakan berkas basis data bibliografi (`references.bib`) beserta gaya sitasi standar, termasuk berbagai bentuk kutipan yang tersedia. Fitur khusus templat ini, seperti penomoran objek otomatis berbasis bab dan daftar singkatan/lambang berbasis glosarium, turut dijelaskan agar dapat dimanfaatkan secara optimal.

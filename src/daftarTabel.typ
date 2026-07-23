@@ -5,7 +5,7 @@
 */
 
 = DAFTAR TABEL
-
+#v(1cm)
 #outline(
   title: none,
   target: figure.where(kind: table),

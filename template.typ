@@ -152,8 +152,17 @@
 
   set par(spacing: 1.5em)
 
-  // Pengaturan Penomoran Heading (Menggunakan Angka Arab: 1, 1.1, 1.1.1)
-  set heading(numbering: "I.1.1")
+  // Pengaturan Penomoran Heading (BAB I, A, 1)
+  set heading(numbering: (n, ..rest) => {
+    let total = rest.pos().len() + 1
+    if total == 1 {
+      numbering("I", n)
+    } else if total == 2 {
+      [#numbering("A", rest.pos().first()).]
+    } else {
+      numbering("A.1", rest.pos().first(), rest.pos().last())
+    }
+  })
 
   // Pengaturan Keterangan (Caption) Tabel dan Gambar
   show figure.where(kind: table): set figure.caption(position: top)
@@ -176,7 +185,7 @@
   // Format penomoran objek (Bab.NomorObjek) menggunakan angka Arab
   set figure(numbering: figureNumber => {
     let chapterNumber = counter(heading).get().first()
-    numbering("I.1", chapterNumber, figureNumber)
+    [#numbering("1.1", chapterNumber, figureNumber).]
   })
   set figure.caption(separator: [ ])
 
@@ -184,7 +193,7 @@
   set math.equation(
     numbering: (..nums) => {
       let chapterNumber = counter(heading).get().first()
-      numbering("(I.1)", chapterNumber, nums.pos().first())
+      numbering("(1.1)", chapterNumber, nums.pos().first())
     },
     block: true,
   )
@@ -242,31 +251,42 @@
 
 /**
  * Menghasilkan Daftar Lampiran secara otomatis berdasarkan indeks heading.
- * Fungsi ini memfilter heading yang memiliki supplement "Lampiran".
+ * Setiap entri menampilkan format "Lampiran 1", "Lampiran 2", dst.
+ * dan tertaut ke halaman lampiran terkait.
  */
 #let generateDaftarLampiran() = {
   heading(level: 1, numbering: none)[DAFTAR LAMPIRAN]
-  outline(
-    title: none,
-    target: heading.where(level: 1, supplement: [Lampiran]),
-  )
+  v(1cm)
+  context {
+    let entries = query(
+      heading.where(level: 1).and(heading.where(supplement: [Lampiran]))
+    )
+    for (i, entry) in entries.enumerate() {
+      let num = i + 1
+      let pageNum = counter(page).at(entry.location()).first()
+      link(label("lamp-" + str(num)))[Lampiran #num. #entry.body]
+      box(width: 1fr)
+      [#pageNum]
+      parbreak()
+    }
+  }
 }
 
 /**
  * Membungkus konten lampiran (Lampiran.typ) agar heading level 1/2 yang ditulis
- * langsung (misal: "= Judul Lampiran") otomatis diberi penomoran alfabetis
- * (A, A.1, B, B.1, dst.) dan dikenali sebagai "Lampiran" oleh Daftar Lampiran,
+ * langsung (misal: "= Judul Lampiran") otomatis diberi penomoran numerik
+ * (1, 1.1, 2, 2.1, dst.) dan dikenali sebagai "Lampiran" oleh Daftar Lampiran,
  * persis seperti cara BAB 1-4 ditulis pada tubuh utama.
  * @param bodyContent Seluruh isi berkas Lampiran.typ (heading + konten lampiran).
  */
 #let setupAppendixBody(bodyContent) = {
-  set heading(numbering: "A.1", supplement: [Lampiran])
-  // Penghitung heading direset agar penomoran lampiran dimulai dari A,
+  set heading(numbering: "1.1", supplement: [Lampiran])
+  // Penghitung heading direset agar penomoran lampiran dimulai dari 1,
   // terlepas dari berapa banyak BAB yang mendahuluinya.
   counter(heading).update(0)
   set figure(numbering: figureNumber => {
     let chapterNumber = counter(heading).get().first()
-    numbering("A.1", chapterNumber, figureNumber)
+    [#numbering("1.1", chapterNumber, figureNumber).]
   })
   set figure.caption(separator: [ ])
   show figure.where(kind: table): set block(breakable: true)

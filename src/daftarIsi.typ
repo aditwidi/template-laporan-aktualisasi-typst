@@ -6,7 +6,7 @@
 
 // Menampilkan judul daftar isi dengan format heading level 1
 = DAFTAR ISI
-
+#v(1cm)
 // Fungsi bawaan outline untuk mengekstraksi struktur dokumen
 #outline(
   title: none, // Title diset 'none' karena sudah direpresentasikan oleh heading di atas

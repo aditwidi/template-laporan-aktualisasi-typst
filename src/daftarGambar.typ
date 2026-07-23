@@ -5,7 +5,7 @@
 */
 
 = DAFTAR GAMBAR
-
+#v(1cm)
 #outline(
   title: none,
   target: figure.where(kind: image),
