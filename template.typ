@@ -39,10 +39,10 @@
   appendixPage: none,
 ) = {
   // 1. Pengaturan Halaman (Page Setup)
-  // Menerapkan mirror margins untuk pencetakan dua sisi (bolak-balik).
+  // Mengatur margin 3-3-3-3 cm dan penomoran halaman romawi kecil di footer.
   set page(
     paper: "a4",
-    margin: (left: 4cm, right: 3cm, top: 3cm, bottom: 3cm),
+    margin: (left: 3cm, right: 3cm, top: 3cm, bottom: 3cm),
     numbering: "i",
     number-align: center,
     footer: context [
