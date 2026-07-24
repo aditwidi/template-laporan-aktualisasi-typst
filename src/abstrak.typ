@@ -31,8 +31,8 @@
 #set par(first-line-indent: (amount: 2em, all: true))
 Panduan ini disusun dengan memanfaatkan templat Laporan Hasil Aktualisasi berbasis Typst sebagai wahana penulisannya sekaligus sebagai contoh langsung (_working example_) dari setiap fitur yang dijelaskan. Materi disusun secara bertahap, dimulai dari pengenalan sintaks dasar Typst -- meliputi penulisan judul, penekanan teks, daftar, mode kode, serta aturan `set` dan `show` -- dilanjutkan dengan cara menyisipkan gambar, tabel, dan persamaan matematis sebagai objek bernomor yang dapat dirujuk silang.
 
-Selanjutnya, panduan ini menjelaskan mekanisme sitasi dan penyusunan daftar pustaka menggunakan berkas basis data bibliografi (`references.bib`) beserta gaya sitasi standar, termasuk berbagai bentuk kutipan yang tersedia. Fitur khusus templat ini, seperti penomoran objek otomatis berbasis bab dan daftar singkatan/lambang berbasis glosarium, turut dijelaskan agar dapat dimanfaatkan secara optimal.
+Fitur khusus templat ini, seperti penomoran objek otomatis berbasis bab dan daftar isi/gambar/tabel/lampiran yang dibuat secara otomatis, turut dijelaskan agar dapat dimanfaatkan secara optimal.
 
-Bagian akhir panduan membahas topik lanjutan yang diperlukan dalam praktik penulisan laporan, meliputi cara menambah bab baru, menyusun lampiran, kesalahan umum yang sering dijumpai beserta cara mengatasinya, serta sumber belajar tambahan untuk memperdalam penguasaan Typst. Dengan mengikuti panduan ini secara berurutan, pembaca diharapkan mampu menyusun naskah Laporan Hasil Aktualisasi yang rapi, konsisten, dan sesuai pedoman format menggunakan Typst secara mandiri.
+Dengan mengikuti panduan ini secara berurutan, pembaca diharapkan mampu menyusun naskah Laporan Hasil Aktualisasi yang rapi, konsisten, dan sesuai pedoman format menggunakan Typst secara mandiri.
 \ \
 *Kata kunci*: Typst, Laporan Hasil Aktualisasi, panduan penulisan, sitasi, figure dan tabel.

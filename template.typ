@@ -287,7 +287,7 @@
  * Membungkus konten lampiran (Lampiran.typ) agar heading level 1/2 yang ditulis
  * langsung (misal: "= Judul Lampiran") otomatis diberi penomoran numerik
  * (1, 1.1, 2, 2.1, dst.) dan dikenali sebagai "Lampiran" oleh Daftar Lampiran,
- * persis seperti cara BAB 1-4 ditulis pada tubuh utama.
+ * persis seperti cara BAB 1-3 ditulis pada tubuh utama.
  * @param bodyContent Seluruh isi berkas Lampiran.typ (heading + konten lampiran).
  */
 #let setupAppendixBody(bodyContent) = {

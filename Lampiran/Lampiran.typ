@@ -15,7 +15,7 @@
 #show: setupAppendixBody
 
 = Contoh Struktur Lampiran <lamp-1>
-Bagian ini mendemonstrasikan bahwa mekanisme penomoran lampiran (1, 1.1, 2, ...) berlaku terpisah dari penomoran BAB I -- BAB V pada tubuh utama laporan. Sebagai contoh, tabel berikut diberi label dan akan bernomor "Tabel 1.1.", bukan melanjutkan nomor tabel dari BAB IV.
+Bagian ini mendemonstrasikan bahwa mekanisme penomoran lampiran (1, 1.1, 2, ...) berlaku terpisah dari penomoran BAB I -- BAB III pada tubuh utama laporan. Sebagai contoh, tabel berikut diberi label dan akan bernomor "Tabel 1.1.", bukan melanjutkan nomor tabel dari bab sebelumnya.
 
 #figure(
   table(
