@@ -161,6 +161,7 @@
 
   // Daftar bernomor/bullet mengikuti hanging-indent paragraf
   show enum: it => pad(left: 1.5em, it)
+  show list: it => pad(left: 1.5em, it)
 
   // Pengaturan Penomoran Heading (BAB I, A, 1)
   set heading(numbering: (n, ..rest) => {
