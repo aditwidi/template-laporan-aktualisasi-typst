@@ -292,6 +292,8 @@
  */
 #let setupAppendixBody(bodyContent) = {
   set heading(numbering: "1.1", supplement: [Lampiran])
+  // Sub-heading lampiran tidak muncul di Daftar Isi, hanya "LAMPIRAN" utama.
+  set heading(outlined: false)
   // Penghitung heading direset agar penomoran lampiran dimulai dari 1,
   // terlepas dari berapa banyak BAB yang mendahuluinya.
   counter(heading).update(0)

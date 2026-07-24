@@ -56,9 +56,8 @@
 
 #include "BAB 3/bab3.typ"
 
-#include "BAB 4/bab4.typ"
 
-#include "BAB 5/bab5.typ"
+
 
 
 #bibliography("references.bib", style: "laporan-aktualisasi.csl", title: "DAFTAR PUSTAKA")

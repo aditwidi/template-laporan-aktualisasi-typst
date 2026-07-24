@@ -8,13 +8,10 @@
  * Label <lamp-1>, <lamp-2>, ... wajib disertakan agar Daftar Lampiran
  * dapat menaut ke halaman yang tepat.
  */
-#import "../template.typ": setupAppendixBody
+#import "/template.typ": setupAppendixBody
 
-#align(center + horizon)[
-  *LAMPIRAN*
-]
+#heading(level: 1, numbering: none)[LAMPIRAN]
 
-#pagebreak()
 #show: setupAppendixBody
 
 = Contoh Struktur Lampiran <lamp-1>
