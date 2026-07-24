@@ -276,7 +276,7 @@
       let num = i + 1
       let pageNum = counter(page).at(entry.location()).first()
       link(label("lamp-" + str(num)))[Lampiran #num. #entry.body]
-      box(width: 1fr)
+      box(width: 1fr, repeat([.], gap: 0.15em))
       [#pageNum]
       parbreak()
     }
