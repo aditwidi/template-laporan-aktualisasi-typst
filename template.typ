@@ -152,8 +152,15 @@
 
   set par(
     spacing: 1.5em,
-    first-line-indent: (amount: 2em, all: true),
+    // Menggeser badan paragraf agar sejajar dengan huruf pertama teks heading
+    hanging-indent: 1.5em,
+    // Indentasi baris pertama = hanging-indent + 2em
+    // (dijumlah manual karena Typst menghitung keduanya dari margin, bukan saling menambah)
+    first-line-indent: (amount: 3.5em, all: true),
   )
+
+  // Daftar bernomor/bullet mengikuti hanging-indent paragraf
+  show enum: it => pad(left: 1.5em, it)
 
   // Pengaturan Penomoran Heading (BAB I, A, 1)
   set heading(numbering: (n, ..rest) => {
