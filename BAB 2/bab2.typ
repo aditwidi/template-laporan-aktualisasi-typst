@@ -3,7 +3,7 @@
   Description: Bab 2 - Penggunaan dasar sintaks Typst.
 */
 
-= PENGGUNAAN DASAR TYPST
+= CAPAIAN PELAKSANAAN AKTUALISASI
 
 == Mode Markah, Mode Kode, dan Mode Matematika
 Typst memiliki tiga mode penulisan yang dapat dicampur bebas dalam satu naskah:

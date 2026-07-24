@@ -150,7 +150,10 @@
   )
   counter(page).update(1)
 
-  set par(spacing: 1.5em)
+  set par(
+    spacing: 1.5em,
+    first-line-indent: (amount: 2em, all: true),
+  )
 
   // Pengaturan Penomoran Heading (BAB I, A, 1)
   set heading(numbering: (n, ..rest) => {
