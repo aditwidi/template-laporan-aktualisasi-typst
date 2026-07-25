@@ -39,10 +39,10 @@
   appendixPage: none,
 ) = {
   // 1. Pengaturan Halaman (Page Setup)
-  // Mengatur margin 3-3-3-3 cm dan penomoran halaman romawi kecil di footer.
+  // Mengatur margin 4-3-4-3 cm dan penomoran halaman romawi kecil di footer.
   set page(
     paper: "a4",
-    margin: (left: 3cm, right: 3cm, top: 3cm, bottom: 3cm),
+    margin: (left: 4cm, right: 3cm, top: 4cm, bottom: 3cm),
     numbering: "i",
     number-align: center,
     footer: context [
@@ -167,7 +167,7 @@
   set heading(numbering: (n, ..rest) => {
     let total = rest.pos().len() + 1
     if total == 1 {
-      numbering("I", n)
+      [BAB #numbering("I", n)]
     } else if total == 2 {
       [#numbering("A", rest.pos().first()).]
     } else {
@@ -230,7 +230,7 @@
       if isAppendix {
         [Lampiran #currentChapterNumber #chapterHeading.body]
       } else {
-        [BAB #currentChapterNumber #chapterHeading.body]
+        [#currentChapterNumber #chapterHeading.body]
       }
     } else {
       // Jika numbering adalah 'none' (misal: Daftar Pustaka), cetak teks apa adanya
