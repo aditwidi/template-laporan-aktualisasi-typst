@@ -85,7 +85,102 @@ Pada bagian ini jelaskan pelaksanaan aktualisasi memuat uraian waktu pelaksanaan
 \
 == Hasil Pelaksanaan Aktualisasi
 
-Pada bagian ini deskripsikan mengenai proses detail pelaksanaan aktualisasi di tempat kerja dari mulai pelaksanaan kegiatan, tahapan kegiatan, uraian dan deskripsi dari masing-masing tahapan kegiatan, output yang dihasilkan, keterkaitan dan penerapan nilai-nilai BerAKHLAK, kendala yang terjadi, para pihak yang terlibat, konflik yang mungkin terjadi, solusi yang dilakukan serta kontribusi terhadap pencapaian visi dan misi organisasi. Pada bagian ini juga harus disertai dengan evidence based atau bukti dukung serta dokumentasi yang relevan dengan masing-masing penjelasannya. Tuangkan secara lengkap dala tabel di bawah ini (Tabel ini ambil dari Laporan Mingguan):
+Kegiatan-kegiatan kreatif yang telah dilakukan terdiri dari beberapa tahapan. Penjelasan terkait kegiatan-kegiatan tersebut
+dijelaskan pada
+
+#set par(justify: false)
+#figure(
+  kind: table,
+  caption: [Hasil Pelaksanaan Aktualisasi],
+  table(
+    columns: (0.5fr, 2fr, 3fr, 3fr, 3.5fr, 3fr),
+    stroke: 0.5pt,
+    inset: 6pt,
+    align: (x, y) => {
+      if x == 0 { center + horizon }
+      else { left + horizon }
+    },
+    table.header(
+      // Baris 1: Nama kolom
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[No.]]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[Kegiatan]]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[Tahapan Kegiatan]]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[Output / Hasil Kegiatan]]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[Keterkaitan Substansi\ Mata Pelatihan]]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[Kontribusi Terhadap\ Visi dan Misi Organisasi]]],
+
+      // Baris 2: Nomor kolom
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(1)]]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(2)]]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(3)]]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(4)]]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(5)]]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(6)]]],
+    ),
+    // Baris 3–5: Data kegiatan aktualisasi
+    [1.], [Mempelajari Pedoman dan Prinsip Kearsipan Surat], [#enum(numbering: "i.", [Mengumpulkan referensi pedoman kearsipan surat], [Mengidentifikasi jenis-jenis surat masuk dan keluar], [Menyusun pedoman kearsipan surat sesuai kebutuhan unit kerja])], [#enum(numbering: "i.", [Tersusunnya pedoman kearsipan surat], [Dokumentasi jenis-jenis surat masuk dan keluar])], [BerAKHLAK (Akuntabel, Kompeten, Harmonis, Loyal, Adaptif, Kolaboratif) diterapkan melalui ketelitian dalam mengidentifikasi jenis surat dan penyusunan pedoman yang akuntabel serta kolaborasi dengan rekan kerja.], [Mendukung terciptanya tata kelola pemerintahan yang baik (good governance) melalui sistem kearsipan yang tertib, transparan, dan akuntabel di lingkungan BPS.],
+
+    [2.], [Membuat Draft Awal Digitalisasi Arsip melalui Google Sites], [#enum(numbering: "i.", [Menganalisis kebutuhan sistem arsip digital], [Merancang struktur Google Sites untuk arsip], [Membuat draft awal halaman arsip digital], [Menguji fungsionalitas unggah dan akses dokumen])], [#enum(numbering: "i.", [Draft awal Google Sites untuk arsip digital], [Dokumentasi hasil uji coba sistem])], [Penerapan nilai Smart ASN melalui pemanfaatan teknologi digital (Google Sites) untuk modernisasi sistem kearsipan dan peningkatan efisiensi kerja.], [Berkontribusi pada visi BPS sebagai penyedia data statistik berkualitas melalui sistem dokumentasi dan arsip yang modern, mudah diakses, dan mendukung transformasi digital.],
+
+    [3.], [Membuat Rancangan Web Dashboard Diseminasi Data Strategis], [#enum(numbering: "i.", [Mengidentifikasi indikator data strategis], [Merancang tata letak dashboard web], [Memilih tools visualisasi data yang sesuai], [Membuat prototipe awal dashboard])], [#enum(numbering: "i.", [Rancangan tata letak dashboard web], [Prototipe awal dashboard diseminasi data])], [Penerapan nilai BerAKHLAK (Adaptif dan Kompeten) serta Smart ASN melalui inovasi penyajian data strategis berbasis web yang interaktif dan mudah dipahami.], [Mendukung misi BPS dalam menyediakan data statistik yang mudah diakses dan dipahami oleh masyarakat serta pemangku kepentingan melalui dashboard visualisasi data yang informatif.],
+  )
+)
+
+#set par(justify: true)
+
+#h(-2em)
+#text(weight: "bold")[Penjelasan Tabel Hasil Pelaksanaan Aktualisasi:]
+
+#{
+  show enum: it => pad(left: 0em, it)
+  set par(hanging-indent: 0em, first-line-indent: 1.5em)
+
+  enum(
+    numbering: "1.",
+    spacing: 2em,
+    [*Kegiatan 1 : Mempelajari Pedoman dan Prinsip Kearsipan Surat* \
+     Untuk menyelesaikan kegiatan pertama tersebut dapat dilakukan dengan 3 (tiga) Tahapan Kegiatan, yaitu:
+
+     #enum(
+       numbering: "1)",
+       spacing: 2em,
+       [*Meminta arahan mentor.* \
+          Pada tahap kegiatan meminta arahan mentor, penulis menyampaikan apa saja yang dilakukan pada kegiatan pertama. Kemudian mentor memberikan masukan dan arahan terhadap apa yang telah penulis sampaikan. Penulis akan melakukan penyampaian rencana kegiatan dengan ramah, sopan, santun dan jelas sebagai bentuk implementasi Berorientasi Pelayanan dan Kompeten, melakukan pencatatan sebagai bentuk implementasi Akuntabel, melakukan penyesuaian rencana jika hasil diskusi memerlukan perubahan kegiatan sebagai bentuk Loyal dan Adaptif. Output pada tahap kegiatan ini adalah arahan dan hasil diskusi bersama mentor.],
+
+       [*Mengumpulkan informasi terkait pedoman dan prinsip kearsipan dari berbagai sumber.* \
+          Pada tahap ini, penulis mengumpulkan informasi dari berbagai sumber kemudian merangkumnya untuk dipahami pada tahap selanjutnya. Pada tahap ini penulis mengimplementasikan nilai Berorientasi Pelayanan dan Akuntabel dikarenakan dapat melihat kebutuhan masyarakat dan mempertanggungjawabkan proses pengumpulan informasi.],
+
+       [*Menyusun pedoman kearsipan surat.* \
+          Pada tahap ini, penulis menyusun pedoman kearsipan surat berdasarkan hasil pengumpulan informasi dan arahan mentor. Implementasi nilai Kompeten dan Adaptif diterapkan melalui penyusunan pedoman yang sesuai dengan kebutuhan unit kerja dan perkembangan teknologi kearsipan. Output tahap ini adalah dokumen pedoman kearsipan surat yang siap digunakan.],
+     )],
+    [*Kegiatan 2 – Membuat Draft Awal Digitalisasi Arsip melalui Google Sites* \
+     Untuk menyelesaikan kegiatan kedua tersebut dapat dilakukan dengan 4 (empat) Tahapan Kegiatan, yaitu:
+     #enum(
+       numbering: "1)",
+       [*Menganalisis kebutuhan sistem arsip digital.* Pada tahap ini, penulis melakukan analisis terhadap kebutuhan sistem arsip digital di unit kerja, termasuk mengidentifikasi jenis dokumen yang akan diarsipkan, alur kerja pengarsipan, dan kebutuhan akses oleh berbagai pihak. Implementasi nilai Kompeten dan Adaptif diterapkan dalam memahami kebutuhan pengguna dan menyesuaikan dengan teknologi yang tersedia.],
+
+       [*Merancang struktur Google Sites untuk arsip.* Berdasarkan hasil analisis, penulis merancang struktur situs yang mencakup halaman utama, kategori arsip, dan sistem navigasi. Implementasi nilai Berorientasi Pelayanan diwujudkan melalui perancangan yang memudahkan pengguna dalam mengakses dokumen.],
+
+       [*Membuat draft awal halaman arsip digital.* Penulis membuat draft awal menggunakan Google Sites sesuai dengan struktur yang telah dirancang. Pada tahap ini, nilai Akuntabel diterapkan melalui dokumentasi setiap langkah pembuatan dan pencatatan kendala yang dihadapi.],
+
+       [*Menguji fungsionalitas unggah dan akses dokumen.* Tahap terakhir adalah pengujian sistem untuk memastikan dokumen dapat diunggah dan diakses dengan baik. Implementasi nilai Harmonis dan Kolaboratif dilakukan melalui pelibatan rekan kerja dalam proses pengujian dan perbaikan berdasarkan umpan balik.],
+     )],
+
+    [*Kegiatan 3 – Membuat Rancangan Web Dashboard Diseminasi Data Strategis* \
+     Untuk menyelesaikan kegiatan ketiga tersebut dapat dilakukan dengan 4 (empat) Tahapan Kegiatan, yaitu:
+
+     #enum(
+       numbering: "1)",
+       [*Mengidentifikasi indikator data strategis.* Pada tahap ini, penulis mengidentifikasi indikator-indikator data strategis yang relevan dengan kebutuhan diseminasi. Implementasi nilai Berorientasi Pelayanan dan Akuntabel diwujudkan melalui pemilihan indikator yang sesuai dengan kebutuhan masyarakat dan dapat dipertanggungjawabkan.],
+
+       [*Merancang tata letak dashboard web.* Penulis merancang tata letak dashboard yang informatif dan mudah dipahami oleh pengguna. Nilai Kompeten dan Adaptif diterapkan dalam pemilihan jenis visualisasi yang tepat untuk setiap indikator data.],
+
+       [*Memilih tools visualisasi data yang sesuai.* Berdasarkan kebutuhan dan kompleksitas data, penulis memilih tools visualisasi data yang paling sesuai. Implementasi nilai Adaptif diwujudkan melalui eksplorasi berbagai tools dan pemilihan yang paling optimal.],
+
+       [*Membuat prototipe awal dashboard.* Tahap akhir adalah pembuatan prototipe awal dashboard berdasarkan rancangan yang telah dibuat. Nilai Kolaboratif diterapkan melalui diskusi dengan rekan kerja untuk mendapatkan masukan perbaikan sebelum pengembangan lebih lanjut.],
+     )],
+  )
+}
 
 == Realisasi Internalisasi NND PNS (BerAKHLAK)
 Pada bagian ini lakukan rekapitulasi realisasi nilai-nilai BerAKHLAK untuk masing-masing kegiatan sesuai yang sudah dilakukan saat aktualisasi dan dituliskan pada bagian sebelumnya. Selain itu juga bandingkan jumlah nilai-nilai tersebut dengan rancangan yang sudah dibuat sebelumnya.
