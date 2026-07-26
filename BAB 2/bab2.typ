@@ -26,7 +26,7 @@ Pada bagian ini jelaskan pelaksanaan aktualisasi memuat uraian waktu pelaksanaan
     // Baris 1: Super-header — Rancangan dan Aktualisasi membawahi masing-masing 2 kolom
     // No., Kegiatan, dan Keterangan di-merge (rowspan:2) mencakup baris 1 dan 2
     table.cell(rowspan: 2, align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[No.]],
-    table.cell(rowspan: 2, align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Kegiatan]],
+    table.cell(rowspan: 2, align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Kegiatan]],
     table.cell(colspan: 2, align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Rancangan]],
     table.cell(colspan: 2, align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Aktualisasi]],
     table.cell(rowspan: 2, align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Keterangan]],
@@ -85,48 +85,143 @@ Pada bagian ini jelaskan pelaksanaan aktualisasi memuat uraian waktu pelaksanaan
 \
 == Hasil Pelaksanaan Aktualisasi
 
-Kegiatan-kegiatan kreatif yang telah dilakukan terdiri dari beberapa tahapan. Penjelasan terkait kegiatan-kegiatan tersebut
-dijelaskan pada
+Pada bagian ini deskripsikan mengenai proses detail pelaksanaan aktualisasi di tempat kerja dari mulai pelaksanaan kegiatan, tahapan kegiatan, uraian dan deskripsi dari masing-masing tahapan kegiatan, output yang dihasilkan, keterkaitan dan penerapan nilai-nilai BerAKHLAK, kendala yang terjadi, para pihak yang terlibat, konflik yang mungkin terjadi, solusi yang dilakukan serta kontribusi terhadap pencapaian visi dan misi organisasi. Pada bagian ini juga harus disertai dengan evidence based atau bukti dukung serta dokumentasi yang relevan dengan masing-masing penjelasannya. Tuangkan secara lengkap dala tabel di bawah ini (Tabel ini ambil dari Laporan Mingguan):
 
 #set par(justify: false)
 #figure(
   kind: table,
   caption: [Hasil Pelaksanaan Aktualisasi],
   table(
-    columns: (0.5fr, 2fr, 3fr, 3fr, 3.5fr, 3fr),
+    columns: (1.5fr, 3fr, 3fr),
     stroke: 0.5pt,
     inset: 6pt,
-    align: (x, y) => {
-      if x == 0 { center + horizon }
-      else { left + horizon }
-    },
-    table.header(
-      // Baris 1: Nama kolom
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[No.]]],
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[Kegiatan]]],
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[Tahapan Kegiatan]]],
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[Output / Hasil Kegiatan]]],
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[Keterkaitan Substansi\ Mata Pelatihan]]],
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[Kontribusi Terhadap\ Visi dan Misi Organisasi]]],
 
-      // Baris 2: Nomor kolom
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(1)]]],
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(2)]]],
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(3)]]],
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(4)]]],
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(5)]]],
-      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#align(center)[#text(weight: "bold")[(6)]]],
-    ),
-    // Baris 3–5: Data kegiatan aktualisasi
-    [1.], [Mempelajari Pedoman dan Prinsip Kearsipan Surat], [#enum(numbering: "i.", [Mengumpulkan referensi pedoman kearsipan surat], [Mengidentifikasi jenis-jenis surat masuk dan keluar], [Menyusun pedoman kearsipan surat sesuai kebutuhan unit kerja])], [#enum(numbering: "i.", [Tersusunnya pedoman kearsipan surat], [Dokumentasi jenis-jenis surat masuk dan keluar])], [BerAKHLAK (Akuntabel, Kompeten, Harmonis, Loyal, Adaptif, Kolaboratif) diterapkan melalui ketelitian dalam mengidentifikasi jenis surat dan penyusunan pedoman yang akuntabel serta kolaborasi dengan rekan kerja.], [Mendukung terciptanya tata kelola pemerintahan yang baik (good governance) melalui sistem kearsipan yang tertib, transparan, dan akuntabel di lingkungan BPS.],
+    // ========== Kegiatan 1 ==========
+    table.cell(align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Kegiatan 1.]],
+    table.cell(colspan: 2, align: left + horizon)[Kolom ini isikan dengan Nama Kegiatan],
 
-    [2.], [Membuat Draft Awal Digitalisasi Arsip melalui Google Sites], [#enum(numbering: "i.", [Menganalisis kebutuhan sistem arsip digital], [Merancang struktur Google Sites untuk arsip], [Membuat draft awal halaman arsip digital], [Menguji fungsionalitas unggah dan akses dokumen])], [#enum(numbering: "i.", [Draft awal Google Sites untuk arsip digital], [Dokumentasi hasil uji coba sistem])], [Penerapan nilai Smart ASN melalui pemanfaatan teknologi digital (Google Sites) untuk modernisasi sistem kearsipan dan peningkatan efisiensi kerja.], [Berkontribusi pada visi BPS sebagai penyedia data statistik berkualitas melalui sistem dokumentasi dan arsip yang modern, mudah diakses, dan mendukung transformasi digital.],
+    table.cell(align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Output Kegiatan]],
+    table.cell(align: left + horizon)[Kolom ini diisikan Deskripsi Output],
+    table.cell(align: left + horizon)[Kolom ini diisi Bukti dukung output, tambahkan link menuju file lengkapnya],
 
-    [3.], [Membuat Rancangan Web Dashboard Diseminasi Data Strategis], [#enum(numbering: "i.", [Mengidentifikasi indikator data strategis], [Merancang tata letak dashboard web], [Memilih tools visualisasi data yang sesuai], [Membuat prototipe awal dashboard])], [#enum(numbering: "i.", [Rancangan tata letak dashboard web], [Prototipe awal dashboard diseminasi data])], [Penerapan nilai BerAKHLAK (Adaptif dan Kompeten) serta Smart ASN melalui inovasi penyajian data strategis berbasis web yang interaktif dan mudah dipahami.], [Mendukung misi BPS dalam menyediakan data statistik yang mudah diakses dan dipahami oleh masyarakat serta pemangku kepentingan melalui dashboard visualisasi data yang informatif.],
+    table.cell(rowspan: 2, align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Tahapan Kegiatan, Uraian\ Kegiatan, dan Keterkaitan\ dengan BerAKHLAK]],
+    table.cell(align: left + horizon)[Kolom ini diisikan Tahapan Kegiatan, uraian/penjelasan singkat tahapan kegiatan, dan keterkaitan tahapan kegiatan dengan BerAKHLAK yang dilakukan pada minggu tersebut.],
+    table.cell(align: left + horizon)[Kolom ini diisikan Bukti Dukung atau Dokumentasi dari setiap Tahapan dan Uraian Kegiatan, tambahkan link menuju file lengkapnya],
+
+    table.cell(colspan: 2, align: left + horizon)[
+      #align(center)[#text(weight: "bold")[Rekapitulasi Jumlah Nilai BerAKHLAK]]
+      #table(
+        columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 2fr),
+        stroke: 0.5pt,
+        inset: 4pt,
+        table.header(
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Ber]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[A]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[K]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[H]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[A]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[L]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[K]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[TOTAL]],
+        ),
+        [], [], [], [], [], [], [], [],
+      )
+    ],
+
+    // Baris 5: Kendala dan Solusi
+    table.cell(align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Kendala, Pihak-pihak Terkait,\ Konflik Kepentingan yang Terjadi, dan\ Solusi yang Dilakukan]],
+    table.cell(colspan: 2, align: left + horizon)[Kolom ini diisikan kendala yang terjadi, Pihak-pihak terkait, Konflik Kepentingan yang Terjadi, dan Solusi yang Dilakukan saat pelaksanaan kegiatan aktualisasi pada kegiatan ini],
+
+    // ========== Pemisah ==========
+    table.cell(colspan: 3, align: center + horizon)[],
+
+    // ========== Kegiatan 2 ==========
+    table.cell(align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Kegiatan 2.]],
+    table.cell(colspan: 2, align: left + horizon)[Kolom ini isikan dengan Nama Kegiatan],
+
+    table.cell(align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Output Kegiatan]],
+    table.cell(align: left + horizon)[Kolom ini diisikan Deskripsi Output],
+    table.cell(align: left + horizon)[Kolom ini diisi Bukti dukung output, tambahkan link menuju file lengkapnya],
+
+    table.cell(rowspan: 2, align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Tahapan Kegiatan, Uraian\ Kegiatan, dan Keterkaitan\ dengan BerAKHLAK]],
+    table.cell(align: left + horizon)[Kolom ini diisikan Tahapan Kegiatan, uraian/penjelasan singkat tahapan kegiatan, dan keterkaitan tahapan kegiatan dengan BerAKHLAK yang dilakukan pada minggu tersebut.],
+    table.cell(align: left + horizon)[Kolom ini diisikan Bukti Dukung atau Dokumentasi dari setiap Tahapan dan Uraian Kegiatan, tambahkan link menuju file lengkapnya],
+
+    table.cell(colspan: 2, align: left + horizon)[
+      #align(center)[#text(weight: "bold")[Rekapitulasi Jumlah Nilai BerAKHLAK]]
+      #table(
+        columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 2fr),
+        stroke: 0.5pt,
+        inset: 4pt,
+        table.header(
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Ber]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[A]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[K]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[H]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[A]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[L]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[K]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[TOTAL]],
+        ),
+        [], [], [], [], [], [], [], [],
+      )
+    ],
+
+    // Baris 5: Kendala dan Solusi
+    table.cell(align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Kendala, Pihak-pihak Terkait,\ Konflik Kepentingan yang Terjadi, dan\ Solusi yang Dilakukan]],
+    table.cell(colspan: 2, align: left + horizon)[Kolom ini diisikan kendala yang terjadi, Pihak-pihak terkait, Konflik Kepentingan yang Terjadi, dan Solusi yang Dilakukan saat pelaksanaan kegiatan aktualisasi pada kegiatan ini],
+
+    // ========== Pemisah ==========
+    table.cell(colspan: 3, align: center + horizon)[],
+
+    // ========== Kegiatan 3 ==========
+    table.cell(align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Kegiatan 3.]],
+    table.cell(colspan: 2, align: left + horizon)[Kolom ini isikan dengan Nama Kegiatan],
+
+    table.cell(align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Output Kegiatan]],
+    table.cell(align: left + horizon)[Kolom ini diisikan Deskripsi Output],
+    table.cell(align: left + horizon)[Kolom ini diisi Bukti dukung output, tambahkan link menuju file lengkapnya],
+
+    table.cell(rowspan: 2, align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Tahapan Kegiatan, Uraian\ Kegiatan, dan Keterkaitan\ dengan BerAKHLAK]],
+    table.cell(align: left + horizon)[Kolom ini diisikan Tahapan Kegiatan, uraian/penjelasan singkat tahapan kegiatan, dan keterkaitan tahapan kegiatan dengan BerAKHLAK yang dilakukan pada minggu tersebut.],
+    table.cell(align: left + horizon)[Kolom ini diisikan Bukti Dukung atau Dokumentasi dari setiap Tahapan dan Uraian Kegiatan, tambahkan link menuju file lengkapnya],
+
+    table.cell(colspan: 2, align: left + horizon)[
+      #align(center)[#text(weight: "bold")[Rekapitulasi Jumlah Nilai BerAKHLAK]]
+      #table(
+        columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 2fr),
+        stroke: 0.5pt,
+        inset: 4pt,
+        table.header(
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Ber]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[A]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[K]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[H]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[A]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[L]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[K]],
+          table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[TOTAL]],
+        ),
+        [], [], [], [], [], [], [], [],
+      )
+    ],
+
+    // Baris 5: Kendala dan Solusi
+    table.cell(align: left + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Kendala, Pihak-pihak Terkait,\ Konflik Kepentingan yang Terjadi, dan\ Solusi yang Dilakukan]],
+    table.cell(colspan: 2, align: left + horizon)[Kolom ini diisikan kendala yang terjadi, Pihak-pihak terkait, Konflik Kepentingan yang Terjadi, dan Solusi yang Dilakukan saat pelaksanaan kegiatan aktualisasi pada kegiatan ini],
+
+    // ============================================================
+    // CARA MENAMBAH KEGIATAN BARU:
+    // 1. Copy blok "Pemisah + Kegiatan N" (dari "// ==========" sampai
+    //    sebelum komentar ini) dan paste di atas baris ini.
+    // 2. Ganti nomor kegiatan (Kegiatan 4., Kegiatan 5., dst.).
+    // 3. Setiap kegiatan terdiri dari: 1 baris pemisah + 5 baris isi.
+    // ============================================================
   )
 )
 
 #set par(justify: true)
+Setelah itu pada bagian akhir ini, jelaskan bagaimana kegiatan aktualisasi yang telah dilaksanakan memberikan kontribusi terhadap pencapaian visi dan misi organisasi. Uraikan keterkaitan antara hasil aktualisasi dengan upaya peningkatan kinerja, efektivitas pelaksanaan tugas, serta dukungan terhadap tujuan strategis organisasi.
 
 #h(-2em)
 #text(weight: "bold")[Penjelasan Tabel Hasil Pelaksanaan Aktualisasi:]
