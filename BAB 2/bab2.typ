@@ -12,7 +12,7 @@ Pada bagian ini jelaskan pelaksanaan aktualisasi memuat uraian waktu pelaksanaan
 #show figure.caption: set text(weight: "bold")
 #figure(
   kind: table,
-  caption: [Realisasi Kegiatan Aktualisasi],
+  caption: [REALISASI KEGIATAN AKTUALISASI],
   table(
     columns: (0.5fr, 2.5fr, 1.5fr, 3fr, 1.7fr, 3fr, 2fr),
     stroke: 0.5pt,
@@ -90,7 +90,7 @@ Pada bagian ini deskripsikan mengenai proses detail pelaksanaan aktualisasi di t
 #set par(justify: false)
 #figure(
   kind: table,
-  caption: [Hasil Pelaksanaan Aktualisasi],
+  caption: [PEMBAHASAN HASIL AKTUALISASI],
   table(
     columns: (1.5fr, 3fr, 3fr),
     stroke: 0.5pt,
@@ -283,7 +283,7 @@ Pada bagian ini lakukan rekapitulasi realisasi nilai-nilai BerAKHLAK untuk masin
 #set par(justify: false)
 #figure(
   kind: table,
-  caption: [Realisasi Internalisasi NND PNS (BerAKHLAK)],
+  caption: [REALISASI INTERNALISASI NND PNS (BerAKHLAK)],
   table(
     columns: (0.5fr, 2fr, 0.7fr, 0.7fr, 0.7fr, 0.7fr, 0.7fr, 0.7fr, 1.5fr, 0.7fr, 0.7fr, 0.7fr, 0.7fr, 0.7fr, 0.7fr, 1.5fr),
     stroke: 0.5pt,
@@ -348,3 +348,37 @@ Berisi uraian tentang Tindak Lanjut yang akan dilakukan termasuk kolaborasi yang
   #text(weight: "regular")[#h(2em)Pada tahap jangka menengah, hasil aktualisasi diharapkan dapat diterapkan secara lebih konsisten dan terintegrasi dalam proses kerja unit. Kegiatan yang dilakukan antara lain penyempurnaan mekanisme atau produk aktualisasi berdasarkan hasil evaluasi, serta mendorong penerapannya secara berkelanjutan oleh seluruh pihak yang terkait di unit kerja.]
 + Jangka Panjang \
   #text(weight: "regular")[#h(2em)Dalam jangka panjang, hasil aktualisasi diharapkan dapat menjadi bagian dari sistem kerja yang lebih permanen di unit kerja. Oleh karena itu, diperlukan dukungan dari pimpinan untuk mengintegrasikan hasil aktualisasi tersebut dalam kebijakan atau prosedur kerja yang berlaku, sehingga dapat mendukung peningkatan kinerja organisasi secara berkelanjutan.]
+
+#set par(justify: false)
+#figure(
+  kind: table,
+  caption: [RENCANA TINDAK LANJUT HASIL AKTUALISASI],
+  table(
+    columns: (0.5fr, 3fr, 2.5fr, 2fr, 2fr, 2fr),
+    stroke: 0.5pt,
+    inset: 6pt,
+    align: center + horizon,
+    table.header(
+      // Baris 1: Nama kolom
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[No.]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Kegiatan yang Akan Dilakukan]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Output]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Waktu]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Pihak Yang Terlibat]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[Keterangan]],
+
+      // Baris 2: Nomor kolom
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[(1)]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[(2)]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[(3)]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[(4)]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[(5)]],
+      table.cell(align: center + horizon, fill: rgb("ebf1dd"))[#text(weight: "bold")[(6)]],
+    ),
+    // Baris 3–7: Data (5 baris, 3 bernomor)
+    [1.], [], [], [], [], [],
+    [2.], [], [], [], [], [],
+    [3.], [], [], [], [], [],
+  )
+)
+#set par(justify: true)
