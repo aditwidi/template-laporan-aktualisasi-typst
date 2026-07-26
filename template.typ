@@ -314,6 +314,7 @@
   })
   set figure.caption(separator: [ ])
   show figure.where(kind: table): set block(breakable: true)
+  show table: set block(breakable: true)
 
   // Override aturan heading level 1 untuk lampiran.
   // Setiap lampiran dimulai pada halaman baru — pagebreak ditambahkan

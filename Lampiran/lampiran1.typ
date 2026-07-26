@@ -18,9 +18,7 @@
   table.cell(fill: rgb("ebf1dd"))[*Tanggal*], [: 27 Juli - 3 Agustus 2026],
 )
 
-#figure(
-  kind: table,
-  table(
+#table(
     columns: (0.5fr, 1.4fr, 3fr, 2.5fr, 1.6fr, 1fr, 1.4fr),
     stroke: 0.5pt,
     inset: 6pt,
@@ -142,16 +140,13 @@
     [...],
     [...],
   )
-)
 
 #set heading(numbering: none)
 == Bukti-Bukti Pelaksanaan Kegiatan Minggu ke-1 dan ke-2
 
 #text(weight: "bold")[A. Dokumentasi Pelaksanaan Kegiatan]
 
-#figure(
-  kind: table,
-  table(
+#table(
     columns: (0.4fr, 2fr, 3fr, 3fr),
     stroke: 0.5pt,
     inset: 6pt,
@@ -221,15 +216,12 @@
     //    dan paste di atas placeholder, lalu ganti No. dan rowspan.
     // ============================================================
   )
-)
 
 ...
 
 #text(weight: "bold")[B. Output/Hasil Kegiatan]
 
-#figure(
-  kind: table,
-  table(
+#table(
     columns: (0.4fr, 2fr, 4fr),
     stroke: 0.5pt,
     inset: 6pt,
@@ -298,7 +290,6 @@
     //    dan paste di atas placeholder.
     // ============================================================
   )
-)
 
 ...
 #set heading(numbering: "1.")
