@@ -315,9 +315,10 @@
   set figure.caption(separator: [ ])
   show figure.where(kind: table): set block(breakable: true)
 
-  // Override aturan heading level 1 agar lampiran TIDAK memicu pagebreak.
-  // Aturan global (di rancanganAktualisasiTemplate) memberikan pagebreak(weak: true)
-  // untuk setiap heading level 1, tapi lampiran harus mengalir tanpa pindah halaman.
+  // Override aturan heading level 1 untuk lampiran.
+  // Setiap lampiran dimulai pada halaman baru — pagebreak ditambahkan
+  // secara eksplisit di masing-masing file lampiran (lampiran2, lampiran3, …)
+  // agar lampiran terakhir tidak menyisakan halaman kosong.
   show heading.where(level: 1): chapterHeading => {
     let isAppendix = chapterHeading.supplement == [Lampiran]
     set text(size: 14pt, weight: "bold")
