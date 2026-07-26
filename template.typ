@@ -295,6 +295,9 @@
   // Margin: top 4cm (sisi jilid), bottom 3cm, left 4cm, right 3cm.
   set page(flipped: true, margin: (top: 4cm, bottom: 3cm, left: 4cm, right: 3cm))
 
+  // Style tautan: warna biru dan bergaris bawah
+  show link: it => text(fill: blue, underline(it.body))
+
   // Reset indentasi paragraf yang terbawa dari setupMainBody
   // (first-line-indent dan hanging-indent tidak diperlukan di lampiran)
   set par(first-line-indent: 0pt, hanging-indent: 0pt)
