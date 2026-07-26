@@ -1,35 +1,20 @@
 /**
- * Berkas utama untuk menulis konten lampiran.
- * Berkas ini harus diletakkan pada akhir main.typ (Backmatter).
- * Tulis setiap lampiran sebagai heading level 1 biasa ("= Judul Lampiran"),
- * persis seperti menulis BAB pada tubuh utama -- penomoran numerik (1, 2, ...)
- * dan sub-heading (1.1, 1.2, ...) diterapkan otomatis oleh setupAppendixBody.
- *
- * Label <lamp-1>, <lamp-2>, ... wajib disertakan agar Daftar Lampiran
- * dapat menaut ke halaman yang tepat.
+ * Berkas utama (hub) untuk Lampiran.
+ * - "LAMPIRAN" heading ditampilkan rata tengah vertikal di halaman portrait.
+ * - setupAppendixBody mengaktifkan halaman landscape dan penomoran lampiran.
+ * - Setiap lampiran ditulis di file terpisah (Lampiran 1.typ, Lampiran 2.typ, …)
+ *   dan di-include di bawah. Untuk menambah lampiran baru, buat file baru
+ *   lalu tambahkan #include di bawah ini.
  */
+
 #import "/template.typ": setupAppendixBody
 
-#heading(level: 1, numbering: none)[LAMPIRAN]
+#align(horizon)[
+  #heading(level: 1, numbering: none)[LAMPIRAN]
+]
 
 #show: setupAppendixBody
 
-= Contoh Struktur Lampiran <lamp-1>
-Bagian ini mendemonstrasikan bahwa mekanisme penomoran lampiran (1, 1.1, 2, ...) berlaku terpisah dari penomoran BAB I -- BAB III pada tubuh utama laporan. Sebagai contoh, tabel berikut diberi label dan akan bernomor "Tabel 1.1.", bukan melanjutkan nomor tabel dari bab sebelumnya.
-
-#figure(
-  table(
-    columns: (1fr, 1fr),
-    stroke: (x, y) => if y == 0 { (bottom: 0.7pt + black) },
-    align: left,
-    table.header([*Kolom 1*], [*Kolom 2*]),
-    [Contoh data], [Contoh nilai],
-  ),
-  caption: [Contoh tabel data pendukung pada lampiran],
-)<Tabel-contoh-lampiran>
-
-== Sub-Lampiran Pertama
-Judul di atas berupa heading level 2 sehingga bernomor "1.1" secara otomatis, mengikuti judul lampiran level 1 di atasnya.
-
-= Contoh Lampiran Kedua <lamp-2>
-Lampiran baru yang ditulis sebagai heading level 1 berikutnya akan otomatis diberi nomor "2", melanjutkan pola numerik dari lampiran sebelumnya.
+#include "lampiran1.typ"
+#include "lampiran2.typ"
+#include "lampiran3.typ"

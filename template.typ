@@ -228,7 +228,7 @@
       // Mengambil dan merender nomor bab/lampiran
       let currentChapterNumber = counter(heading).display(chapterHeading.numbering)
       if isAppendix {
-        [Lampiran #currentChapterNumber #chapterHeading.body]
+        [LAMPIRAN #currentChapterNumber #chapterHeading.body]
       } else {
         [#currentChapterNumber #chapterHeading.body]
       }
@@ -275,7 +275,7 @@
     for (i, entry) in entries.enumerate() {
       let num = i + 1
       let pageNum = counter(page).at(entry.location()).first()
-      link(label("lamp-" + str(num)))[Lampiran #num. #entry.body]
+      link(label("lamp-" + str(num)))[LAMPIRAN #num. #entry.body]
       box(width: 1fr, repeat([.], gap: 0.15em))
       [#pageNum]
       parbreak()
@@ -291,6 +291,14 @@
  * @param bodyContent Seluruh isi berkas Lampiran.typ (heading + konten lampiran).
  */
 #let setupAppendixBody(bodyContent) = {
+  // Orientasi landscape untuk seluruh halaman lampiran.
+  // Margin: top 4cm (sisi jilid), bottom 3cm, left 4cm, right 3cm.
+  set page(flipped: true, margin: (top: 4cm, bottom: 3cm, left: 4cm, right: 3cm))
+
+  // Reset indentasi paragraf yang terbawa dari setupMainBody
+  // (first-line-indent dan hanging-indent tidak diperlukan di lampiran)
+  set par(first-line-indent: 0pt, hanging-indent: 0pt)
+
   set heading(numbering: "1.1", supplement: [Lampiran])
   // Sub-heading lampiran tidak muncul di Daftar Isi, hanya "LAMPIRAN" utama.
   set heading(outlined: false)
@@ -303,5 +311,33 @@
   })
   set figure.caption(separator: [ ])
   show figure.where(kind: table): set block(breakable: true)
+
+  // Override aturan heading level 1 agar lampiran TIDAK memicu pagebreak.
+  // Aturan global (di rancanganAktualisasiTemplate) memberikan pagebreak(weak: true)
+  // untuk setiap heading level 1, tapi lampiran harus mengalir tanpa pindah halaman.
+  show heading.where(level: 1): chapterHeading => {
+    let isAppendix = chapterHeading.supplement == [Lampiran]
+    set text(size: 14pt, weight: "bold")
+    set align(if isAppendix { left } else { center })
+    v(1em)
+
+    if chapterHeading.numbering != none {
+      counter(figure.where(kind: image)).update(0)
+      counter(figure.where(kind: table)).update(0)
+      counter(math.equation).update(0)
+
+      let currentChapterNumber = counter(heading).display(chapterHeading.numbering)
+      if isAppendix {
+        [LAMPIRAN #currentChapterNumber #chapterHeading.body]
+      } else {
+        [#currentChapterNumber #chapterHeading.body]
+      }
+    } else {
+      chapterHeading.body
+    }
+
+    v(1.5em)
+  }
+
   bodyContent
 }
